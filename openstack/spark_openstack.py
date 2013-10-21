@@ -118,9 +118,9 @@ def parse_args():
                       You can use 'OS_AUTH_URL'=<openstack_auth_url> environment variable
                       instead of this option""")
     parser.add_option("-n", "--openstack-network-communication-method", type="choice", metavar="NET",
-                      choices=["fixed", "floating", "public-dns-name"], default="fixed",
-                      help="""Openstack communication way with instances. Choose between 'fixed', 'floating' and
-                      'public-dns-name'. If you don't understand what does it mean, look at README in this folder""")
+                      choices=["fixed", "floating"], default="floating",
+                      help="""Openstack communication way with instances. Choose between 'fixed', 'floating'
+                      .""")
 
     (opts, args) = parser.parse_args()
     if len(args) != 2:
